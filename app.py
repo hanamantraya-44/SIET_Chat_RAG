@@ -35,7 +35,7 @@ with st.chat_message("assistant"):
     st.session_state.chat_hist.append(
       {"role" :"assistant" , "content" : answer})
 
-if st.button("Clear_chat")
+if st.button("Clear_chat"):
    st.session_state.chat_hist = []
    st.return()
   
