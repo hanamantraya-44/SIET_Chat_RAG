@@ -27,7 +27,7 @@ def create_chunks(full_text, chunksize = 500, overlap=100):
 #Embedding:
 def build_vectors (chunks, model_name = "all-MiniLM-L6-v2"):
   if not chunks:
-    raise valueError("Cannot apply embeddding without chunks")
+    raise ValueError("Cannot apply embeddding without chunks")
   embed_model = SentenceTransformer(model_name)
   embed_vectors = embed_model.encode(chunks, convert_to_numpy = True)
   faiss.normalize_L2(embed_vectors)
