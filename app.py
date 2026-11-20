@@ -37,5 +37,5 @@ with st.chat_message("assistant"):
 
 if st.button("Clear_chat"):
    st.session_state.chat_hist = []
-   st.return()
+   st.rerun()
   
